@@ -1,6 +1,7 @@
 class CreateTables < ActiveRecord::Migration[5.0]
 
   def change
+
     create_table :start_locations do |t|
       t.string :name
       t.float :lat
@@ -8,9 +9,7 @@ class CreateTables < ActiveRecord::Migration[5.0]
       t.boolean :favorite
       t.timestamps
     end
-  end
 
-  def change
     create_table :end_locations do |t|
       t.string :name
       t.float :lat
@@ -18,9 +17,7 @@ class CreateTables < ActiveRecord::Migration[5.0]
       t.boolean :favorite
       t.timestamps
     end
-  end
 
-  def change
     create_table :rides do |t|
       t.string :name
       t.string :product_type
@@ -35,6 +32,7 @@ class CreateTables < ActiveRecord::Migration[5.0]
       t.string :estimate
       t.timestamps
     end
+    
   end
 
 end
